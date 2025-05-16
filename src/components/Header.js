@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
+import CartPanel from './CartPanel';
 
 function Header() {
+    const [showCart, setShowCart] = useState(false);
+
     return (
+        <>
         <header className="h-10 bg-black fixed top-0 left-0 w-full z-[1000] flex justify-center items-center">
             <p className="text-white text-[11px] font-medium uppercase tracking-[2px] text-center">
                 Does your skin need something refreshing?
@@ -21,7 +25,7 @@ function Header() {
                         className="w-[24px] h-[24px]"
                     />
                 </button>
-                <button className="icon-button p-[5px] transition-transform duration-200 hover:scale-110">
+                <button onClick={() => setShowCart(true)} className="icon-button p-[5px] transition-transform duration-200 hover:scale-110">
                     <img
                         src="images/shopping-cart-white-icon.png"
                         alt="Cart"
@@ -30,6 +34,8 @@ function Header() {
                 </button>
             </div>
         </header>
+            <CartPanel visible={showCart} onClose={() => setShowCart(false)} />
+        </>
     );
 }
 
