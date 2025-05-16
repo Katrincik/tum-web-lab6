@@ -1,33 +1,37 @@
 import React from 'react';
-
-const products = [
-    {
-        image: '/images/bs1.webp',
-        title: 'Niacinamide 10% + Zinc 1%',
-        description: 'Universal serum for blemish-prone skin that smooths, brightens, and supports',
-        price: '6.00 USD',
-    },
-    {
-        image: '/images/bs2.jpg',
-        title: 'Hyaluronic Acid 2% + B5',
-        description: 'Hyaluronic acid serum to hydrate, smooth and visibly reduce lines and wrinkles',
-        price: '9.90 USD',
-    },
-    {
-        image: '/images/bs3.jpg',
-        title: 'Natural Moisturizing Factors + HA',
-        description: 'Original surface hydrator to support skin barrier and keep it protected',
-        price: '6.70 USD',
-    },
-    {
-        image: '/images/bs4.jpg',
-        title: 'Glycolic Acid 7% Exfoliating Toner',
-        description: 'Glycolic acid toner that smooths skin texture, evens tone, and enhances luminosity',
-        price: '8.70 USD',
-    },
-];
+import { useCart } from '../components/CartContext';
 
 function Bestsellers() {
+
+    const { addToCart } = useCart();
+
+    const products = [
+        {
+            image: '/images/bs1.webp',
+            title: 'Niacinamide 10% + Zinc 1%',
+            description: 'Universal serum for blemish-prone skin that smooths, brightens, and supports',
+            price: '6.00 USD',
+        },
+        {
+            image: '/images/bs2.jpg',
+            title: 'Hyaluronic Acid 2% + B5',
+            description: 'Hyaluronic acid serum to hydrate, smooth and visibly reduce lines and wrinkles',
+            price: '9.90 USD',
+        },
+        {
+            image: '/images/bs3.jpg',
+            title: 'Natural Moisturizing Factors + HA',
+            description: 'Original surface hydrator to support skin barrier and keep it protected',
+            price: '6.70 USD',
+        },
+        {
+            image: '/images/bs4.jpg',
+            title: 'Glycolic Acid 7% Exfoliating Toner',
+            description: 'Glycolic acid toner that smooths skin texture, evens tone, and enhances luminosity',
+            price: '8.70 USD',
+        },
+    ];
+
     return (
         <>
             <hr className="border border-gray-400 w-[90%] mx-auto" />
@@ -52,7 +56,8 @@ function Bestsellers() {
                                     <p className="font-bold text-[16px]">{product.price}</p>
                                 </div>
                             </div>
-                            <button className="mt-4 w-full h-[45px] border border-gray-500 rounded-md font-medium text-sm transition duration-300 hover:bg-black hover:text-white">
+                            <button   onClick={() => addToCart(product)}
+                                      className="mt-4 w-full h-[45px] border border-gray-500 rounded-md font-medium text-sm transition duration-300 hover:bg-black hover:text-white">
                                 Add To Cart
                             </button>
                         </div>
