@@ -2,7 +2,7 @@ import React from 'react';
 import { useCart } from '../components/CartContext';
 
 function CartPanel({ visible, onClose }) {
-    const { cartItems, removeFromCart} = useCart();
+    const { cartItems, removeFromCart, increaseQty, decreaseQty} = useCart();
 
     return (
         <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-5 z-[1001] transform transition-transform duration-300 ${visible ? 'translate-x-0' : 'translate-x-full'}`}>
@@ -17,7 +17,19 @@ function CartPanel({ visible, onClose }) {
                         <p className="text-sm text-gray-800 font-bold">{item.price}</p>
 
                         <div className="flex items-center gap-2 mt-2">
+                            <button
+                                onClick={() => decreaseQty(item.title)}
+                                className="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded"
+                            >
+                                −
+                            </button>
                             <span className="text-sm">{item.qty}</span>
+                            <button
+                                onClick={() => increaseQty(item.title)}
+                                className="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded"
+                            >
+                                +
+                            </button>
                         </div>
 
                         <button
