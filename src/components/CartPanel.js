@@ -30,6 +30,7 @@ function CartPanel({ visible, onClose }) {
                             >
                                 +
                             </button>
+                            <span className="text-sm">{item.qty}</span>
                         </div>
 
                         <button
