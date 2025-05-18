@@ -34,9 +34,9 @@ function Bestsellers() {
 
     return (
         <>
-            <hr className="border border-gray-400 w-[90%] mx-auto" />
+            <hr className="border border-gray-400 dark:border-black w-[90%] mx-auto" />
             <section id="bestsellers" className="w-[90%] mx-[100px] text-center py-5">
-                <h2 className="text-left text-[32px] text-black/80 font-semibold">Bestsellers</h2>
+                <h2 className="text-left text-[32px] text-black/80 dark:text-white font-semibold">Bestsellers</h2>
                 <div className="flex flex-wrap justify-center gap-10 py-5">
                     {products.map((product, index) => (
                         <div
@@ -51,13 +51,13 @@ function Bestsellers() {
                             <h3 className="text-lg font-semibold my-2">{product.title}</h3>
                             <div className="text-left flex-1">
                                 <p className="mt-2 text-sm">{product.description}</p>
-                                <hr className="border border-gray-400 w-full mt-2" />
+                                <hr className="border border-gray-400 dark:border-black w-full mt-2" />
                                 <div className="flex justify-between items-center mt-2">
                                     <p className="font-bold text-[16px]">{product.price}</p>
                                 </div>
                             </div>
                             <button   onClick={() => addToCart(product)}
-                                      className="mt-4 w-full h-[45px] border border-gray-500 rounded-md font-medium text-sm transition duration-300 hover:bg-black hover:text-white">
+                                      className="mt-4 w-full h-[45px] border border-gray-500 dark:border-white dark:bg-black rounded-md font-medium text-sm transition duration-300 text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black dark:hover:border-gray-500">
                                 Add To Cart
                             </button>
                         </div>
