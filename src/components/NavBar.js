@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeButton from './ThemeButton';
 
 function NavBar() {
     return (
@@ -22,6 +23,9 @@ function NavBar() {
                         </li>
                     ))}
                 </ul>
+                <div className="absolute right-4">
+                    <ThemeButton />
+                </div>
             </div>
         </nav>
     );
