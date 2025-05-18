@@ -2,9 +2,9 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer id="contacts" className="bg-[#f9f9f9] px-[60px] py-10 text-sm font-sans">
+        <footer id="contacts" className="bg-[#f9f9f9] dark:bg-black px-[60px] py-10 text-sm font-sans">
             <div className="max-w-[1100px] mx-auto">
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap gap-6 dark:text-white">
                     <div className="flex-1 min-w-[150px] max-w-[180px]">
                         <h3 className="text-lg font-bold mb-4">Company</h3>
                         <ul>
