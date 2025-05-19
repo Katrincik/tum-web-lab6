@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tum-web-lab6/static/css/main.1834aa39.css",
-    "main.js": "/tum-web-lab6/static/js/main.17d69d3d.js",
+    "main.js": "/tum-web-lab6/static/js/main.1ceb425c.js",
     "index.html": "/tum-web-lab6/index.html",
     "main.1834aa39.css.map": "/tum-web-lab6/static/css/main.1834aa39.css.map",
-    "main.17d69d3d.js.map": "/tum-web-lab6/static/js/main.17d69d3d.js.map"
+    "main.1ceb425c.js.map": "/tum-web-lab6/static/js/main.1ceb425c.js.map"
   },
   "entrypoints": [
     "static/css/main.1834aa39.css",
-    "static/js/main.17d69d3d.js"
+    "static/js/main.1ceb425c.js"
   ]
 }
