@@ -18,7 +18,7 @@ function HeroSection() {
                     Available for all true-to-your skin shades that blend seamless alongside your regimen.
                 </p>
                 <button
-                    className="mt-6 px-6 md:px-10 py-2 md:py-3 text-md md:text-lg font-medium text-black dark:text-white bg-white dark:bg-black bg-opacity-10 border border-black rounded-full transition duration-300 hover:bg-black hover:text-white hover:border-2 hover:border-black"
+                    className="mt-6 px-6 md:px-10 py-2 md:py-3 text-md md:text-lg font-medium text-black dark:text-white bg-white dark:bg-black bg-opacity-10 border border-black rounded-full transition duration-300 hover:bg-black hover:text-white hover:border-2 hover:border-black dark:hover:bg-white dark:hover:text-black"
                     onClick={() =>
                         window.location.href =
                             "https://theordinary.com/en-us/multi-active-delivery-essence-100706.html"
