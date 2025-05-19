@@ -4,7 +4,7 @@ import ThemeButton from './ThemeButton';
 function NavBar() {
     return (
         <nav className="fixed top-10 left-0 w-full z-[999] bg-[#e0dede] dark:bg-black h-[60px] flex justify-center items-center">
-            <div className="h-[62px] flex justify-center items-center">
+            <div className="h-[62px] bg-[#e0dede] dark:bg-black flex justify-center items-center">
                 <ul className="flex gap-[20px] list-none p-0 m-0 group">
                     {[
                         { href: "#home", label: "Home" },
