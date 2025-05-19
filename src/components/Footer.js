@@ -8,28 +8,28 @@ function Footer() {
                     <div className="flex-1 min-w-[150px] max-w-[180px]">
                         <h3 className="text-lg font-bold mb-4">Company</h3>
                         <ul>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">About Us</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Join Us</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">About Us</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Join Us</a></li>
                         </ul>
                     </div>
 
                     <div className="flex-1 min-w-[150px]">
                         <h3 className="text-lg font-bold mb-4">Our Commitments</h3>
                         <ul>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Accessibility</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Sustainability</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Change is the Journey</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Everything Is Chemicals</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Accessibility</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Sustainability</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Change is the Journey</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Everything Is Chemicals</a></li>
                         </ul>
                     </div>
 
                     <div className="flex-1 min-w-[150px]">
                         <h3 className="text-lg font-bold mb-4">Customer Care</h3>
                         <ul>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">FAQ</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Disposal Instructions</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Return Policy</a></li>
-                            <li className="mb-2"><a href="#" className="text-[#333] hover:underline">Promotion Terms & Conditions</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">FAQ</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Disposal Instructions</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Return Policy</a></li>
+                            <li className="mb-2"><a href="#" className="text-[#333] dark:text-[#666] hover:underline">Promotion Terms & Conditions</a></li>
                         </ul>
                     </div>
 

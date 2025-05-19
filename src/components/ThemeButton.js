@@ -9,8 +9,8 @@ function ThemeButton() {
     return (
         <button
             onClick={chooseTheme}
-            className={`relative flex items-center w-[120px] h-[40px] rounded-full transition-colors duration-300 overflow-hidden
-                        ${isDark ? 'bg-black' : 'bg-gray-200'}`}
+            className={`relative flex items-center w-[120px] h-[40px] rounded-full transition-colors duration-300 overflow-hidden border border-white 
+                        ${isDark ? 'bg-black border-white' : 'bg-gray-200'}`}
         >
             <div
                 className={`absolute top-1 left-1 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-300 z-0
