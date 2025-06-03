@@ -188,7 +188,20 @@ app.get('/products', authenticateToken, (req, res) => {
  *       201:
  *         description: Product added
  */
-app.post('/products', authenticateToken, (req, res) => {
+
+function requirePermission(requiredPermission) {
+    return (req, res, next) => {
+        const userPermissions = req.user.permissions || [];
+
+        if (!userPermissions.includes(requiredPermission)) {
+            return res.status(403).json({ error: 'Permission denied' });
+        }
+
+        next();
+    };
+}
+
+app.post('/products', authenticateToken, requirePermission('WRITE'), (req, res) => {
     const { id, name, quantity } = req.body;
     if (!id || !name || quantity == null) {
         return res.status(400).json({ error: 'Missing product fields' });
@@ -252,7 +265,7 @@ app.put('/products/:id', authenticateToken, (req, res) => {
  *       404:
  *         description: Product not found
  */
-app.delete('/products/:id', authenticateToken, (req, res) => {
+app.delete('/products/:id', authenticateToken, requirePermission('DELETE'), (req, res) => {
     const index = cartProducts.findIndex(p => p.id === req.params.id);
     if (index === -1) return res.status(404).json({ error: 'Product not found' });
     cartProducts.splice(index, 1);
