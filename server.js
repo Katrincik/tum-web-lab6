@@ -101,6 +101,12 @@ app.post('/register', (req, res) => {
  *       401:
  *         description: Invalid credentials
  */
+
+const ROLE_PERMISSIONS = {
+    admin: ["READ", "WRITE", "DELETE"],
+    user: ["READ"]
+};
+
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -112,7 +118,9 @@ app.post('/login', (req, res) => {
         return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    const token = jwt.sign({ email, role }, SECRET, { expiresIn: '1m' });
+    const permissions = ROLE_PERMISSIONS[role];
+
+    const token = jwt.sign({ email, role, permissions }, SECRET, { expiresIn: '1m' });
     res.json({ token });
 });
 
