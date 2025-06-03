@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import CartPanel from './CartPanel';
+import { useAuth } from '../components/AuthContext';
 
 function Header() {
     const [showCart, setShowCart] = useState(false);
+    const { user, logout } = useAuth();
 
     return (
         <>
@@ -32,6 +34,15 @@ function Header() {
                         className="w-[24px] h-[24px]"
                     />
                 </button>
+
+                {user && (
+                    <button
+                        onClick={logout}
+                        className="bg-red-600 text-white px-2 py-1 text-xs rounded hover:bg-red-700"
+                    >
+                        Log Out
+                    </button>
+                )}
             </div>
         </header>
             <CartPanel visible={showCart} onClose={() => setShowCart(false)} />
